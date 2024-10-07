@@ -1,2 +1,9 @@
-<p>Bienvenue au Sanctuaire du jeu</p>
-<app-product />
+<app-menu>
+  @if(total > 0) {
+  <p>Votre total est de : {{ total }}</p>
+  } @else {
+  <p>votre panier est vide</p>
+  } @for(product of products; track product.id) { @if(product.stock > 0) {
+  <app-product [product]="product" (addToBasket)="ajouterProduit($event)" />
+  } }
+</app-menu>

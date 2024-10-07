@@ -1,1 +1,20 @@
-<p>product works!</p>
+<!-- Cards with media area -->
+<mat-card
+  class="example-card"
+  appearance="outlined"
+  [ngClass]="{ 'stock-limite': product.stock === 1 }"
+>
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{ product.title }}</mat-card-title>
+      <mat-card-subtitle>{{ product.price }}€</mat-card-subtitle>
+      <img mat-card-sm-image src="{{ product.photo }}" />
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>{{ product.description }}</mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="warn" (click)="handleClick()">
+      Acheter
+    </button>
+  </mat-card-actions>
+</mat-card>
