@@ -7,7 +7,9 @@
   <mat-card-header>
     <mat-card-title-group>
       <mat-card-title>{{ product.title }}</mat-card-title>
-      <mat-card-subtitle>{{ product.price }}€</mat-card-subtitle>
+      <mat-card-subtitle>{{
+        product.price | currency : "EUR" : "symbol" : "" : "fr"
+      }}</mat-card-subtitle>
       <img mat-card-sm-image src="{{ product.photo }}" />
     </mat-card-title-group>
   </mat-card-header>
