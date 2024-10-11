@@ -1,6 +1,9 @@
 <app-menu>
   @if(total > 0) {
-  <p>Votre total est de : {{ total }}</p>
+  <p>
+    Votre total est de :
+    {{ total | currency : "EUR" : "symbol" : "" : "fr" }}
+  </p>
   } @else {
   <p>votre panier est vide</p>
   } @for(product of products; track product.id) { @if(product.stock > 0) {
