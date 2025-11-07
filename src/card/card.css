@@ -1,0 +1,8 @@
+.example-card {
+  width: 400px;
+}
+
+:host {
+  display: inline-block;
+  margin: 10px;
+}

@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { Card } from '../card/card';
+import { MenuComponent } from './menu/menu.component';
+import { Card } from "../card/card";
 
 @Component({
   selector: 'app-root',
-  imports: [Card],
+  imports: [MenuComponent, Card],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
