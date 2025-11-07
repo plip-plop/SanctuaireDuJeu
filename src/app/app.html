@@ -1,3 +1,10 @@
 <app-menu>
-    <app-card />
+  @if(total()) {
+  <p>Total: {{ total() }} €</p>
+  } @else {
+  <p>Votre panier est vide !</p>
+  } @for(item of products(); track item.id) { @if(item.stock > 0) {
+  <app-card [product]="item" (addToBasket)="ajouterAuPanier($event)" />
+  } }
 </app-menu>
+cd
